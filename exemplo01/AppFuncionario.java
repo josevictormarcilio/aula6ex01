@@ -8,8 +8,11 @@ public class AppFuncionario {
         Gerente gerente1 = new Gerente("José Victor", 5000, 10); //cria objeto funcionario a partir do modelo funcionario
 
         System.out.println("Funcionario 1: " + funcionario1.getNome());
-        System.out.println("Funcionario 2: " + funcionario2.getNome());
-        System.out.println("Gerente: " + gerente1.getNome() + " possui " + gerente1.getNfuncionario() + " funcionário(s)");
+        
+        funcionario2.aumentarSalario(0.10);
+        System.out.println(funcionario2.imprimir());
+        gerente1.aumentarSalario(0.1);
+        System.out.println(gerente1.imprimir());
 
     }
 }

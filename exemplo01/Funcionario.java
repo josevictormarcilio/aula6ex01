@@ -2,7 +2,7 @@ package exemplo01;
 
 public class Funcionario {
 
-    private String nome;
+    protected String nome; //acessar diretamente da classe derivada
     private double salario;
 
     //construtor - método para inicializar o objeto funcionario
@@ -39,5 +39,15 @@ public class Funcionario {
         if (salario > 0) {
             this.salario = salario;
         }
+    }
+
+    public String imprimir(){
+        return "Funcionario: " + nome + " Salário: "+ String.format("%.2f", salario);
+    }
+
+    public void aumentarSalario (double perc){
+        //salario = salario + (salario * perc);
+        //salario = salario + (1 + perc);
+        salario *= (1 + perc);
     }
 }
